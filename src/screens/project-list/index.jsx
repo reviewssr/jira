@@ -15,7 +15,6 @@ export const ProjectListScreen = () => {
   }) 
 
   useEffect(() => {
-    console.log(111111111, param)
     fetch(`${apiUrl}/projects?${qs.stringify(cleanObject(param))}`).then(async response => {
       if (response.ok) {
         setList(await response.json()) 
